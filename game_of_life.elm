@@ -7,29 +7,6 @@ import Set
 board_size: Int
 board_size = 32
 
---pulsar_live_cells: Set.Set (Int,Int)
---pulsar_live_cells=
---  let
---    c:Int
---    c=board_size//2
---  in
---    Set.fromList
---    [ (c+2,c+1), (c+2,c-1), (c-2,c+1), (c-2,c-1)
---    , (c+3,c+1), (c+3,c-1), (c-3,c+1), (c-3,c-1)
---    , (c+3,c+2), (c+3,c-2), (c-3,c+2), (c-3,c-2)
---    , (c+1,c+2), (c+1,c-2), (c-1,c+2), (c-1,c-2)
---    , (c+1,c+3), (c+1,c-3), (c-1,c+3), (c-1,c-3)
---    , (c+2,c+3), (c+2,c-3), (c-2,c+3), (c-2,c-3)
---    , (c+2,c+5), (c+2,c-5), (c-2,c+5), (c-2,c-5)
---    , (c+3,c+5), (c+3,c-5), (c-3,c+5), (c-3,c-5)
---    , (c+3,c+6), (c+3,c-6), (c-3,c+6), (c-3,c-6)
---    , (c+3,c+7), (c+3,c-7), (c-3,c+7), (c-3,c-7)
---    , (c+5,c+2), (c+5,c-2), (c-5,c+2), (c-5,c-2)
---    , (c+5,c+3), (c+5,c-3), (c-5,c+3), (c-5,c-3)
---    , (c+6,c+3), (c+6,c-3), (c-6,c+3), (c-6,c-3)
---    , (c+7,c+3), (c+7,c-3), (c-7,c+3), (c-7,c-3)
---    ]
-
 pulsar_generator_live_cells: Set.Set (Int,Int)
 pulsar_generator_live_cells=
   let
