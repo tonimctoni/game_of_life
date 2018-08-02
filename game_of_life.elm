@@ -168,7 +168,9 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Time.every (second/5.0) Tick
+  if model.running
+  then Time.every (second/5.0) Tick
+  else Sub.none
 
 
 -- VIEW
