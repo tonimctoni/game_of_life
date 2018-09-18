@@ -62,7 +62,6 @@ type alias Model =
   , running: Bool
   }
 
-
 init : () -> (Model, Cmd Msg)
 init _ =
   ({live_cells=Set.empty, running=False}, Cmd.none)
@@ -163,6 +162,7 @@ update msg model =
       then (model, Cmd.none)
       else ({model | live_cells=Set.empty}, Cmd.none)
 
+
 -- SUBSCRIPTIONS
 
 subscriptions : Model -> Sub Msg
@@ -170,6 +170,7 @@ subscriptions model =
   if model.running
   then Time.every 200 Tick
   else Sub.none
+
 
 -- VIEW
 
